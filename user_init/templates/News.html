@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+ <h1><center>News and Info</center></h1>
+    {% for News in News %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ News.Latest_news }}</a>
+              <small class="text-muted">{{ News.date_deposited }}</small>
+            </div>
+            <p class="article-content">{{ News.news_content }}</p>
+          </div>
+        </article>
+        {%  endfor %}
+{% endblock content %}

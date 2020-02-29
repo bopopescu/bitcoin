@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1><center>Last Deposits</center></h1>
+    {% for Deposits in Deposits %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ Deposits.username }}</a>
+              <small class="text-muted">{{ Deposits.date_deposited }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ Deposits.last_deposit }}</a></h2>
+            <p class="article-content">{{ Deposits.total_deposit }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
